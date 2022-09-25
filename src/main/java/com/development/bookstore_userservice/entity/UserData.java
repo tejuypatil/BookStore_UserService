@@ -22,8 +22,6 @@ public class UserData {
 
     @Column(nullable = false)
     private String password;
-
-    @Column(nullable = false)
     private boolean isAdmin;
     public UserData(UserRegisterRequestDTO userRegisterRequestDTO)
     {
@@ -33,7 +31,7 @@ public class UserData {
         this.email=userRegisterRequestDTO.getEmail();
         this.loginId=userRegisterRequestDTO.getLoginId();
         this.password=userRegisterRequestDTO.getPassword();
-        this.isAdmin=userRegisterRequestDTO.isAdmin();
+        this.isAdmin=userRegisterRequestDTO.getIsAdmin();
     }
     public UserData() {
 

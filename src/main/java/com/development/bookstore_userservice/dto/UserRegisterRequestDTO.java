@@ -10,6 +10,15 @@ public class UserRegisterRequestDTO {
     private String email;
     private String loginId;
     private String password;
+
+    public boolean getIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(boolean admin) {
+        isAdmin = admin;
+    }
+
     private boolean isAdmin;
 
 }

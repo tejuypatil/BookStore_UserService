@@ -61,4 +61,10 @@ public class UserService implements IUserService {
             throw new UserOrPasswordWrong(userLoginRequestDTO.getLoginId());
         }
     }
+
+    @Override
+    public UserData getUser(int userId) {
+
+        return userRepository.findById(userId).orElse(null);
+    }
 }
